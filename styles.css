@@ -5,14 +5,13 @@
 }
 
 :root {
-  /* Event4Charity color palette inspired by modern design */
-  --primary-purple: #6366f1;
-  --primary-blue: #3b82f6;
-  --primary-green: #10b981;
-  --primary-orange: #f59e0b;
-  --accent-pink: #ec4899;
-  --dark-purple: #4f46e5;
-  --light-purple: #f3f4f6;
+  /* Event4Charity brand colors from logo */
+  --primary-green: #B8E53D;
+  --primary-teal: #3A7B7B;
+  --dark-teal: #2D5F5F;
+  --light-green: #D4F56B;
+  --accent-green: #A4D65E;
+  --brand-black: #000000;
   --gray-50: #f9fafb;
   --gray-100: #f3f4f6;
   --gray-200: #e5e7eb;
@@ -29,17 +28,17 @@
   --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
   --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
   --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
-  --shadow-colored: 0 10px 25px -5px rgba(99, 102, 241, 0.25);
-  --gradient-primary: linear-gradient(135deg, var(--primary-purple), var(--primary-blue));
-  --gradient-secondary: linear-gradient(135deg, var(--primary-green), var(--primary-blue));
-  --gradient-accent: linear-gradient(135deg, var(--accent-pink), var(--primary-orange));
+  --shadow-colored: 0 10px 25px -5px rgba(184, 229, 61, 0.25);
+  --gradient-primary: linear-gradient(135deg, var(--primary-green), var(--primary-teal));
+  --gradient-secondary: linear-gradient(135deg, var(--light-green), var(--dark-teal));
+  --gradient-accent: linear-gradient(135deg, var(--accent-green), var(--primary-teal));
 }
 
 body {
   font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
   line-height: 1.6;
   color: var(--gray-800);
-  background-color: var(--white);
+  background-color: #fafbfc;
   overflow-x: hidden;
   font-size: 16px;
 }
@@ -78,13 +77,13 @@ nav {
   align-items: center;
   font-size: 1.5rem;
   font-weight: 700;
-  color: var(--primary-purple);
+  color: var(--primary-teal);
   text-decoration: none;
   transition: all 0.3s ease;
 }
 
 .logo:hover {
-  color: var(--dark-purple);
+  color: var(--dark-teal);
 }
 
 .logo::before {
@@ -132,7 +131,7 @@ nav {
 }
 
 .nav-links a:hover {
-  color: var(--primary-purple);
+  color: var(--primary-teal);
   background-color: var(--gray-50);
 }
 
@@ -221,7 +220,7 @@ nav {
 
 .mobile-nav-links a:hover {
   background: var(--gray-100);
-  color: var(--primary-orange);
+  color: var(--primary-teal);
   transform: translateX(10px);
 }
 
@@ -338,7 +337,7 @@ nav {
 }
 
 .hero-tagline {
-  color: var(--primary-purple);
+  color: var(--primary-teal);
   font-weight: 600;
   margin-bottom: 1rem;
   font-size: 1rem;
@@ -370,14 +369,14 @@ nav {
   color: var(--gray-500);
   font-size: 1rem;
   font-weight: 600;
-  border-bottom: 3px solid var(--primary-orange);
+  border-bottom: 3px solid var(--primary-green);
   display: inline-block;
   padding-bottom: 5px;
   transition: all 0.3s ease;
 }
 
 .hero-partners:hover {
-  color: var(--primary-orange);
+  color: var(--primary-green);
   transform: translateY(-2px);
 }
 
@@ -534,7 +533,7 @@ nav {
 }
 
 .mass-participation-subtitle {
-  color: var(--primary-purple);
+  color: var(--primary-teal);
   font-weight: 600;
   margin-bottom: 1rem;
   font-size: 0.9rem;
@@ -602,7 +601,7 @@ nav {
 }
 
 .lme-logo {
-  color: var(--primary-blue);
+  color: var(--primary-teal);
 }
 
 .great-run-logo {
@@ -638,7 +637,7 @@ nav {
 }
 
 .fundraising-platform-subtitle {
-  color: var(--primary-purple);
+  color: var(--primary-teal);
   font-weight: 600;
   margin-bottom: 1rem;
   font-size: 0.9rem;
@@ -720,7 +719,7 @@ nav {
 }
 
 .alzheimers {
-  color: var(--primary-blue);
+  color: var(--primary-teal);
 }
 .macmillan {
   color: var(--primary-green);
@@ -729,10 +728,10 @@ nav {
   color: var(--gray-800);
 }
 .pancreatic {
-  color: var(--primary-purple);
+  color: var(--dark-teal);
 }
 .children-cancer {
-  color: var(--primary-orange);
+  color: var(--accent-green);
 }
 
 /* Call to Action Section */
@@ -797,7 +796,7 @@ nav {
 
 .cta-section .btn-primary {
   background: white;
-  color: var(--primary-purple);
+  color: var(--primary-teal);
 }
 
 .cta-section .btn-primary:hover {
@@ -853,7 +852,7 @@ nav {
   padding: 1.5rem;
   background: var(--gray-50);
   border-radius: 12px;
-  border-left: 4px solid var(--primary-purple);
+  border-left: 4px solid var(--primary-teal);
   font-size: 1rem;
   line-height: 1.6;
   position: relative;
@@ -865,7 +864,7 @@ nav {
   top: -5px;
   left: 10px;
   font-size: 2.5rem;
-  color: var(--primary-purple);
+  color: var(--primary-teal);
   font-family: serif;
 }
 
@@ -907,7 +906,7 @@ nav {
 }
 
 .donations-subtitle {
-  color: var(--primary-purple);
+  color: var(--primary-teal);
   font-weight: 600;
   margin-bottom: 1rem;
   font-size: 0.9rem;
@@ -1026,8 +1025,8 @@ nav {
 
 .form-input:focus {
   outline: none;
-  border-color: var(--primary-purple);
-  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
+  border-color: var(--primary-teal);
+  box-shadow: 0 0 0 3px rgba(58, 123, 123, 0.1);
   transform: translateY(-1px);
 }
 
@@ -1044,7 +1043,7 @@ nav {
 }
 
 .form-disclaimer a {
-  color: var(--primary-purple);
+  color: var(--primary-teal);
   text-decoration: none;
   font-weight: 500;
 }
@@ -1131,7 +1130,7 @@ nav {
   align-items: center;
   font-size: 1.5rem;
   font-weight: 700;
-  color: var(--primary-purple);
+  color: var(--primary-teal);
 }
 
 .footer-logo::before {
@@ -1446,7 +1445,7 @@ nav {
   width: 50px;
   height: 50px;
   border: 4px solid var(--gray-200);
-  border-top: 4px solid var(--primary-purple);
+  border-top: 4px solid var(--primary-teal);
   border-radius: 50%;
   animation: spin 1s linear infinite;
 }

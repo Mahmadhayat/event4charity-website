@@ -22,7 +22,13 @@
     <header id="header">
       <div class="container">
         <nav>
-          <a href="#" class="logo">E4C</a>
+          <a href="#" class="logo">
+            <img
+              src="assets/event4charity-logo.png"
+              alt="Event4Charity"
+              class="logo-image"
+            />
+          </a>
 
           <ul class="nav-links">
             <li><a href="#">Why Event4Charity? </a></li>
@@ -71,7 +77,8 @@
               Digital donations, fundraising and events
             </div>
             <h1 class="hero-title">
-              Putting your charity front and centre of your fundraising - Updated!
+              Putting your charity front and centre of your fundraising -
+              Updated!
             </h1>
             <p class="hero-description">
               Our donations, fundraising and event reg tech puts your charity
@@ -100,40 +107,81 @@
         </h2>
 
         <div class="features-grid">
-          <div class="feature-card">
-            <div class="feature-icon">👥</div>
-            <h3 class="feature-title">Mass Participation</h3>
-            <p class="feature-description">
-              Enable thousands of supporters to participate in your fundraising
-              events with seamless registration and management tools.
-            </p>
-          </div>
+          <div class="features-slider">
+            <div class="feature-card">
+              <div class="feature-icon">👥</div>
+              <h3 class="feature-title">Mass Participation</h3>
+              <p class="feature-description">
+                Enable thousands of supporters to participate in your
+                fundraising events with seamless registration and management
+                tools.
+              </p>
+            </div>
 
-          <div class="feature-card">
-            <div class="feature-icon">💳</div>
-            <h3 class="feature-title">Donations</h3>
-            <p class="feature-description">
-              Secure, branded donation experiences that put your charity at the
-              heart of every transaction and supporter interaction.
-            </p>
-          </div>
+            <div class="feature-card">
+              <div class="feature-icon">💳</div>
+              <h3 class="feature-title">Donations</h3>
+              <p class="feature-description">
+                Secure, branded donation experiences that put your charity at
+                the heart of every transaction and supporter interaction.
+              </p>
+            </div>
 
-          <div class="feature-card">
-            <div class="feature-icon">🎯</div>
-            <h3 class="feature-title">Fundraising</h3>
-            <p class="feature-description">
-              Powerful fundraising tools that amplify your campaigns and help
-              supporters raise more for your cause.
-            </p>
-          </div>
+            <div class="feature-card">
+              <div class="feature-icon">🎯</div>
+              <h3 class="feature-title">Fundraising</h3>
+              <p class="feature-description">
+                Powerful fundraising tools that amplify your campaigns and help
+                supporters raise more for your cause.
+              </p>
+            </div>
 
-          <div class="feature-card">
-            <div class="feature-icon">📅</div>
-            <h3 class="feature-title">Fundraising and Events</h3>
-            <p class="feature-description">
-              Comprehensive event management combined with integrated
-              fundraising to maximize your impact and reach.
-            </p>
+            <div class="feature-card">
+              <div class="feature-icon">📅</div>
+              <h3 class="feature-title">Fundraising and Events</h3>
+              <p class="feature-description">
+                Comprehensive event management combined with integrated
+                fundraising to maximize your impact and reach.
+              </p>
+            </div>
+
+            <!-- Duplicate cards for seamless loop -->
+            <div class="feature-card">
+              <div class="feature-icon">👥</div>
+              <h3 class="feature-title">Mass Participation</h3>
+              <p class="feature-description">
+                Enable thousands of supporters to participate in your
+                fundraising events with seamless registration and management
+                tools.
+              </p>
+            </div>
+
+            <div class="feature-card">
+              <div class="feature-icon">💳</div>
+              <h3 class="feature-title">Donations</h3>
+              <p class="feature-description">
+                Secure, branded donation experiences that put your charity at
+                the heart of every transaction and supporter interaction.
+              </p>
+            </div>
+
+            <div class="feature-card">
+              <div class="feature-icon">🎯</div>
+              <h3 class="feature-title">Fundraising</h3>
+              <p class="feature-description">
+                Powerful fundraising tools that amplify your campaigns and help
+                supporters raise more for your cause.
+              </p>
+            </div>
+
+            <div class="feature-card">
+              <div class="feature-icon">📅</div>
+              <h3 class="feature-title">Fundraising and Events</h3>
+              <p class="feature-description">
+                Comprehensive event management combined with integrated
+                fundraising to maximize your impact and reach.
+              </p>
+            </div>
           </div>
         </div>
       </div>
@@ -210,15 +258,11 @@
     <section class="client-logos fade-in">
       <div class="container">
         <div class="logos-grid">
-          <div class="client-logo alzheimers">🧠 Alzheimer's Society</div>
-          <div class="client-logo macmillan">🌿 MACMILLAN CANCER SUPPORT</div>
-          <div class="client-logo gosh">
-            😊 GREAT ORMOND STREET HOSPITAL CHARITY
-          </div>
-          <div class="client-logo pancreatic">🟣 Pancreatic CANCER UK</div>
-          <div class="client-logo children-cancer">
-            🧡 CHILDREN WITH CANCER UK
-          </div>
+          <div class="client-logo">Alzheimer's Society</div>
+          <div class="client-logo">MACMILLAN CANCER SUPPORT</div>
+          <div class="client-logo">GREAT ORMOND STREET HOSPITAL CHARITY</div>
+          <div class="client-logo">Pancreatic CANCER UK</div>
+          <div class="client-logo">CHILDREN WITH CANCER UK</div>
         </div>
       </div>
     </section>
@@ -334,9 +378,9 @@
         <div
           style="
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 2.5rem;
-            max-width: 1000px;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 2rem;
+            max-width: 1200px;
             margin: 0 auto;
           "
         >
@@ -527,7 +571,11 @@
               style="
                 width: 80px;
                 height: 80px;
-                background: linear-gradient(135deg, var(--dark-teal), var(--primary-teal));
+                background: linear-gradient(
+                  135deg,
+                  var(--dark-teal),
+                  var(--primary-teal)
+                );
                 border-radius: 50%;
                 display: flex;
                 align-items: center;
@@ -733,7 +781,13 @@
         </div>
 
         <div class="footer-bottom">
-          <div class="footer-logo">E4C</div>
+          <div class="footer-logo">
+            <img
+              src="assets/event4charity-logo.png"
+              alt="Event4Charity"
+              class="footer-logo-image"
+            />
+          </div>
 
           <div class="footer-legal">
             Online Giving Ltd. is registered with the Financial Conduct

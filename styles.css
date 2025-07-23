@@ -51,8 +51,8 @@ body {
 
 /* Modern Header Styles */
 header {
-  background: var(--white);
-  border-bottom: 1px solid var(--gray-200);
+  background: var(--dark-teal);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   position: sticky;
   top: 0;
   z-index: 1000;
@@ -75,32 +75,19 @@ nav {
 .logo {
   display: flex;
   align-items: center;
-  font-size: 1.5rem;
-  font-weight: 700;
-  color: var(--primary-teal);
+  justify-content: flex-start;
   text-decoration: none;
   transition: all 0.3s ease;
 }
 
 .logo:hover {
-  color: var(--dark-teal);
+  transform: scale(1.05);
 }
 
-.logo::before {
-  content: "E4C";
-  width: 40px;
-  height: 40px;
-  background: var(--gradient-primary);
-  border-radius: 10px;
-  margin-right: 0.75rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 0.8rem;
-  color: white;
-  font-weight: 700;
-  flex-shrink: 0;
-  box-shadow: var(--shadow-colored);
+.logo-image {
+  height: 90px;
+  width: auto;
+  max-width: 250px;
   transition: all 0.3s ease;
 }
 
@@ -120,7 +107,7 @@ nav {
 
 .nav-links a {
   text-decoration: none;
-  color: var(--gray-600);
+  color: white !important;
   font-weight: 500;
   font-size: 0.9rem;
   transition: all 0.3s ease;
@@ -131,8 +118,8 @@ nav {
 }
 
 .nav-links a:hover {
-  color: var(--primary-teal);
-  background-color: var(--gray-50);
+  color: var(--primary-green);
+  background-color: rgba(255, 255, 255, 0.1);
 }
 
 .nav-actions {
@@ -159,7 +146,7 @@ nav {
 .mobile-menu-toggle span {
   width: 25px;
   height: 3px;
-  background: var(--gray-700);
+  background: white;
   margin: 3px 0;
   transition: 0.3s;
   border-radius: 2px;
@@ -249,6 +236,15 @@ nav {
   line-height: 1.2;
 }
 
+/* Header specific button styles */
+header .btn {
+  color: white;
+}
+
+header .btn:hover {
+  color: white;
+}
+
 .btn-primary {
   background: var(--gradient-primary);
   color: white;
@@ -279,13 +275,14 @@ nav {
 
 .btn-outline {
   background: transparent;
-  color: var(--gray-700);
-  border: 1px solid var(--gray-300);
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 .btn-outline:hover {
-  background: var(--gray-50);
-  border-color: var(--gray-400);
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.5);
+  color: white;
 }
 
 .btn-secondary {
@@ -431,22 +428,40 @@ nav {
 }
 
 .features-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 2rem;
+  display: flex;
+  overflow: hidden;
   margin-top: 3rem;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  border-radius: 16px;
+}
+
+.features-slider {
+  display: flex;
+  animation: slideInfinite 60s infinite linear;
+  gap: 2rem;
+  width: calc(200% + 2rem);
+}
+
+@keyframes slideInfinite {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
 }
 
 .feature-card {
   background: white;
-  padding: 2.5rem 2rem;
-  border-radius: 16px;
-  text-align: left;
+  padding: 2rem 1.5rem;
+  border-radius: 12px;
+  text-align: center;
   box-shadow: var(--shadow-sm);
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   border: 1px solid var(--gray-200);
   position: relative;
   overflow: hidden;
+  flex: 0 0 300px;
+  min-width: 300px;
 }
 
 .feature-card::before {
@@ -479,7 +494,7 @@ nav {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 1.5rem;
+  margin: 0 auto 1.5rem auto;
   font-size: 1.5rem;
   color: white;
   box-shadow: var(--shadow-colored);
@@ -560,35 +575,35 @@ nav {
 
 .partner-section {
   margin-bottom: 2rem;
-  padding: 1.5rem;
-  background: var(--gray-50);
-  border-radius: 12px;
-  border: 1px solid var(--gray-200);
+  padding: 1rem 1.25rem;
+  background: rgba(184, 229, 61, 0.05);
+  border-radius: 8px;
+  border: 1px solid rgba(184, 229, 61, 0.2);
 }
 
 .partner-label {
-  font-weight: 600;
-  color: var(--gray-700);
-  margin-bottom: 1rem;
-  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--gray-600);
+  margin-bottom: 0.75rem;
+  font-size: 0.85rem;
 }
 
 .partner-logos {
   display: flex;
-  gap: 1.5rem;
+  gap: 1rem;
   align-items: center;
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
   flex-wrap: wrap;
 }
 
 .partner-logo {
-  height: 40px;
+  height: 32px;
   font-weight: 600;
-  font-size: 1rem;
+  font-size: 0.85rem;
   display: flex;
   align-items: center;
-  padding: 0.75rem 1rem;
-  border-radius: 8px;
+  padding: 0.5rem 0.75rem;
+  border-radius: 6px;
   background: white;
   box-shadow: var(--shadow-sm);
   transition: all 0.3s ease;
@@ -672,28 +687,34 @@ nav {
 
 .logos-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 2rem;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1.5rem;
   align-items: center;
   justify-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .client-logo {
-  height: 70px;
+  height: 60px;
+  width: 100%;
+  max-width: 220px;
   display: flex;
   align-items: center;
   justify-content: center;
   font-weight: 600;
-  font-size: 1rem;
+  font-size: 0.75rem;
   text-align: center;
-  opacity: 0.7;
+  opacity: 0.8;
   transition: all 0.4s ease;
-  padding: 1.25rem;
+  padding: 0.75rem 1rem;
   border-radius: 12px;
   background: linear-gradient(135deg, var(--white), var(--gray-50));
   border: 1px solid var(--gray-200);
   position: relative;
   overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  line-height: 1.2;
 }
 
 .client-logo::before {
@@ -718,21 +739,7 @@ nav {
   border-color: rgba(99, 102, 241, 0.3);
 }
 
-.alzheimers {
-  color: var(--primary-teal);
-}
-.macmillan {
-  color: var(--primary-green);
-}
-.gosh {
-  color: var(--gray-800);
-}
-.pancreatic {
-  color: var(--dark-teal);
-}
-.children-cancer {
-  color: var(--accent-green);
-}
+/* All client logos now use consistent color from .client-logo class */
 
 /* Call to Action Section */
 .cta-section {
@@ -977,9 +984,9 @@ nav {
 
 .contact-form {
   background: white;
-  padding: 2.5rem;
-  border-radius: 16px;
-  box-shadow: var(--shadow-xl);
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: var(--shadow-lg);
   border: 1px solid var(--gray-200);
   position: relative;
   overflow: hidden;
@@ -1064,7 +1071,7 @@ nav {
 
 /* Footer */
 .footer {
-  background: var(--gray-900);
+  background: var(--dark-teal);
   color: white;
   padding: 3rem 0 2rem;
   position: relative;
@@ -1093,7 +1100,7 @@ nav {
 }
 
 .footer-section ul li a {
-  color: var(--gray-400);
+  color: white;
   text-decoration: none;
   transition: all 0.3s ease;
   font-weight: 400;
@@ -1106,7 +1113,7 @@ nav {
 
 .footer-contact p {
   margin-bottom: 0.5rem;
-  color: var(--gray-400);
+  color: white;
   font-weight: 400;
   font-size: 0.9rem;
 }
@@ -1128,29 +1135,16 @@ nav {
 .footer-logo {
   display: flex;
   align-items: center;
-  font-size: 1.5rem;
-  font-weight: 700;
-  color: var(--primary-teal);
 }
 
-.footer-logo::before {
-  content: "E4C";
-  width: 32px;
-  height: 32px;
-  background: var(--gradient-primary);
-  border-radius: 8px;
-  margin-right: 0.75rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 0.75rem;
-  color: white;
-  font-weight: 700;
-  box-shadow: var(--shadow-colored);
+.footer-logo-image {
+  height: 80px;
+  width: auto;
+  transition: all 0.3s ease;
 }
 
 .footer-legal {
-  color: var(--gray-400);
+  color: white;
   font-size: 0.8rem;
   max-width: 600px;
   line-height: 1.5;

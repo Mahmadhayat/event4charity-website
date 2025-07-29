@@ -350,6 +350,49 @@ header .btn-primary:hover {
   overflow: hidden;
 }
 
+/* Image Loading Optimization */
+.hero-image,
+.mass-participation-image,
+.fundraising-platform-image,
+.case-study-image,
+.donations-image,
+.contact-form-image {
+  background-attachment: scroll;
+  will-change: transform;
+  transform: translateZ(0);
+  /* Add loading placeholder */
+  background-color: var(--gray-100);
+  position: relative;
+}
+
+/* Loading placeholder for images */
+.hero-image::after,
+.mass-participation-image::after,
+.fundraising-platform-image::after,
+.case-study-image::after,
+.donations-image::after,
+.contact-form-image::after {
+  content: "Loading...";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: var(--gray-400);
+  font-size: 0.9rem;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+/* Show loading text only when image hasn't loaded */
+.hero-image:not([style*="background-image"])::after,
+.mass-participation-image:not([style*="background-image"])::after,
+.fundraising-platform-image:not([style*="background-image"])::after,
+.case-study-image:not([style*="background-image"])::after,
+.donations-image:not([style*="background-image"])::after,
+.contact-form-image:not([style*="background-image"])::after {
+  opacity: 1;
+}
+
 .hero::before {
   content: "";
   position: absolute;

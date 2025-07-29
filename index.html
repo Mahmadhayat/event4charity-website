@@ -11,6 +11,9 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
       rel="stylesheet"
     />
+    <!-- Preload critical images -->
+    <link rel="preload" href="assets/hero-image.jpg" as="image" />
+    <link rel="preload" href="assets/event4charity-logo.png" as="image" />
   </head>
   <body>
     <!-- Loading Animation -->
@@ -27,6 +30,7 @@
               src="assets/event4charity-logo.png"
               alt="Event4Charity"
               class="logo-image"
+              loading="eager"
             />
           </a>
 
@@ -786,6 +790,7 @@
               src="assets/event4charity-logo.png"
               alt="Event4Charity"
               class="footer-logo-image"
+              loading="lazy"
             />
           </div>
 
